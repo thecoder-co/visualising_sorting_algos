@@ -40,6 +40,25 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDVYm_dMa_hP5l1INkNfjji0GxvaKGDqw0",
+      authDomain: "visualising-sorting-algos.firebaseapp.com",
+      projectId: "visualising-sorting-algos",
+      storageBucket: "visualising-sorting-algos.appspot.com",
+      messagingSenderId: "19489556595",
+      appId: "1:19489556595:web:01fa7a0c30ae1234044206"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
