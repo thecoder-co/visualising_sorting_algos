@@ -4,7 +4,13 @@ This is a simple project to visualise sorting algorithms. It is written in Dart 
 
 ## Video Demo
 
-<video src = "video_demo.mp4"> </video>
+- Bubble Sort
+
+![Bubble Sort](videos/bubble_sort.gif)
+
+- Quick Sort
+
+![Quick Sort](videos/quick_sort.gif)
 
 ## Getting Started
 
