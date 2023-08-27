@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:visualising_sorting_algos/bogosort.dart';
 import 'package:visualising_sorting_algos/bubblesort.dart';
 import 'package:visualising_sorting_algos/quicksort.dart';
 import 'package:visualising_sorting_algos/utils/app_routes.dart';
@@ -30,6 +31,12 @@ class CustomDrawer extends StatelessWidget {
             title: const Text('Quick Sort'),
             onTap: () {
               pushToAndClearStack(context, const QuickSort());
+            },
+          ),
+          ListTile(
+            title: const Text('Bogo Sort'),
+            onTap: () {
+              pushToAndClearStack(context, const BogoSort());
             },
           ),
         ],

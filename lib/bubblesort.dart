@@ -11,35 +11,6 @@ class BubbleSort extends ConsumerStatefulWidget {
 }
 
 class _MyHomePageState extends ConsumerState<BubbleSort> {
-  Future<List<int>> quickSort(List<int> arr) async {
-    if (arr.length <= 1) {
-      return arr;
-    }
-
-    final pivot = arr[arr.length ~/ 2];
-    final left = <int>[];
-    final middle = <int>[];
-    final right = <int>[];
-
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i] < pivot) {
-        left.add(arr[i]);
-      } else if (arr[i] == pivot) {
-        middle.add(arr[i]);
-      } else {
-        right.add(arr[i]);
-      }
-    }
-
-    final sorted = [...await quickSort(left), pivot, ...await quickSort(right)];
-
-    await Future.delayed(Duration(milliseconds: ref.read(delayProvider)));
-    //print(sorted);
-    ref.read(algoProvider.notifier).updateList(sorted);
-
-    return sorted;
-  }
-
   (List<int>, int, int, int)? bubbleSortStep(
       List<int> arr, int n, int i, int j) {
     if (i >= n - 1) {
